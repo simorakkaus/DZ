@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2467332A275A6C9900EED178 /* DZ01_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24673329275A6C9900EED178 /* DZ01_1App.swift */; };
-		2467332C275A6C9900EED178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467332B275A6C9900EED178 /* ContentView.swift */; };
+		2467332C275A6C9900EED178 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467332B275A6C9900EED178 /* RootView.swift */; };
 		2467332E275A6C9A00EED178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2467332D275A6C9A00EED178 /* Assets.xcassets */; };
 		24673331275A6C9B00EED178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24673330275A6C9B00EED178 /* Preview Assets.xcassets */; };
 		2467333B275A6C9B00EED178 /* DZ01_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467333A275A6C9B00EED178 /* DZ01_1Tests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		24673326275A6C9900EED178 /* DZ01-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DZ01-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24673329275A6C9900EED178 /* DZ01_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZ01_1App.swift; sourceTree = "<group>"; };
-		2467332B275A6C9900EED178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2467332B275A6C9900EED178 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		2467332D275A6C9A00EED178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24673330275A6C9B00EED178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24673336275A6C9B00EED178 /* DZ01-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DZ01-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				24673329275A6C9900EED178 /* DZ01_1App.swift */,
-				2467332B275A6C9900EED178 /* ContentView.swift */,
+				2467332B275A6C9900EED178 /* RootView.swift */,
 				2467332D275A6C9A00EED178 /* Assets.xcassets */,
 				2467332F275A6C9B00EED178 /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2467332C275A6C9900EED178 /* ContentView.swift in Sources */,
+				2467332C275A6C9900EED178 /* RootView.swift in Sources */,
 				2467332A275A6C9900EED178 /* DZ01_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
