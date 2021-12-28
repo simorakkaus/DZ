@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ArtworksView: View {
+    @EnvironmentObject var navigation: NavigationStack
+    
     var body: some View {
-        NavigationView {
-            List(artWorks) { artwork in
-                NavigationLink(destination: ArtworkDetails(artwork: artwork)) {
-                    ArtworkRow(artwork: artwork)
-                }
+        List(artWorks) { artwork in
+            ArtworkRow(artwork: artwork).onTapGesture {
+                self.navigation.advance(NavigationItem(view: AnyView(ArtworkDetails(artwork: artwork))))
             }
-            .navigationBarTitle("Artworks")
         }
     }
 }

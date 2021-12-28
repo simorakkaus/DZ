@@ -16,18 +16,29 @@ struct RootView: View {
     @StateObject private var tabController = TabController()
     
     var body: some View {
+        
         TabView(selection: $tabController.activeTab) {
-            HomeView()
-                .tag(Tab.home)
-                .tabItem { Label("Home", systemImage: "house") }
             
-            ArtworksView()
-                .tag(Tab.artworks)
-                .tabItem { Label("Artworks", systemImage: "photo.circle.fill") }
+            NavigationHost()
+                .environmentObject(NavigationStack(NavigationItem(view: AnyView(
+                    HomeView()
+                        .tag(Tab.home)
+                        .tabItem { Label("Home", systemImage: "house") }
+                ))))
             
-            SettingsView()
-                .tag(Tab.settings)
-                .tabItem { Label("Settings", systemImage: "gearshape") }
+            NavigationHost()
+                .environmentObject(NavigationStack(NavigationItem(view: AnyView(
+                    ArtworksView()
+                        .tag(Tab.artworks)
+                        .tabItem { Label("Artworks", systemImage: "photo.circle.fill") }
+                ))))
+            
+            NavigationHost()
+                .environmentObject(NavigationStack(NavigationItem(view: AnyView(
+                    SettingsView()
+                        .tag(Tab.settings)
+                        .tabItem { Label("Settings", systemImage: "gearshape") }
+                ))))
         }
         .environmentObject(tabController)
     }

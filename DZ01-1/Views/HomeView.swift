@@ -9,16 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var tabController: TabController
+    @EnvironmentObject var navigation: NavigationStack
+    
     var body: some View {
         VStack {
-            Text("Home View")
+            Text("Home View").font(.title)
             Button("Open Settings View") {
                 tabController.open(.settings)
             }
-            .padding(.vertical)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.capsule)
+            .padding()
+            .background(.blue)
+            .foregroundColor(.white)
+            .clipShape(Capsule())
             
+            Button("Open List Item View") {
+                
+            }
+            .padding()
+            .background(.green)
+            .foregroundColor(.white)
+            .clipShape(Capsule())
         }
     }
 }
