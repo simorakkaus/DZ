@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var navigation: NavigationStack
     @State var showSheetView = false
     
     var body: some View {

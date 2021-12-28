@@ -9,26 +9,31 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var tabController: TabController
-    @EnvironmentObject var navigation: NavigationStack
     
     var body: some View {
-        VStack {
-            Text("Home View").font(.title)
-            Button("Open Settings View") {
-                tabController.open(.settings)
-            }
-            .padding()
-            .background(.blue)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
+        
+        NavigationView {
             
-            Button("Open List Item View") {
+            VStack {
                 
+                Text("Home View").font(.title)
+                
+                Button("Open Settings View") {
+                    tabController.open(.settings)
+                }
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+                
+                NavigationLink(destination: ArtworkDetails(artwork: artWorks[1])) {
+                    Text("Open Artwork Details")
+                        .padding()
+                        .background(.pink)
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
+                }
             }
-            .padding()
-            .background(.green)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
         }
     }
 }
